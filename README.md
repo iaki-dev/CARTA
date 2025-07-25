@@ -4,7 +4,6 @@
 <!-- badges: start -->
 <!-- badges: end -->
 
-![CARTA_image](CARTA_image.png) 
 
 CARTA (Connected Accessible Regions by input of the combination between Transcription factor and tArget) , similar to the traditional Japanese card game, where the upper phrase is read and then matched with the lower phrase, can extract candidate enhancer regions by inputting combinations of Tramscoription factor (TF) and target.
 
