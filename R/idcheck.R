@@ -1,5 +1,14 @@
 
-
+#' @title ID check
+#' @description \code{idcheck} Check ID of TF motifs. If there are some TF motifs, Select single ID by own.
+#'
+#' @importFrom dplyr  filter
+#' @param tfs2 output of cleantfmotiftable
+#' @param TF Interest TF
+#' @return output of combination TF and ID
+#' @export
+#' @examples
+#' # id <- idcheck(tfs2 = tfs2, TF = TF)
 
 
 # @tfs2 = tfs2
@@ -18,5 +27,4 @@ idcheck <- function(tfs2, TF){
     id <- NULL
   }
 }
-  
-  
+

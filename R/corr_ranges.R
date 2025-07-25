@@ -1,13 +1,22 @@
 
+#' @title correlation ranges
+#' @description \code{corr_ranges} correlation ranges
+#'
+#' @importFrom dplyr filter
+#' @param seuratobj Seurat object
+#' @param target target of interest (character)
+#' @param ranges.links.final outputs of make_ranges
+#' @param corrtheshold Correlation value between RNA count and ATAC peak
+#' @param assay_exp Assays RNA or SCT
+#' @param meantatachreshold Minimum value within the maximum value for each cluster of ATAC counts)
+#' @return 出力の説明
+#' @export
+#' @examples
+#'
 
 
-# @ranges.final = ranges.final
-# @corrtheshold = 0.03 (ATAC-SCTの相関)
-# @meantatachreshold = 0.2 (ATACカウントのクラスタごとのmaxの最低)
-# @assay_exp = RNA or SCT
-
-corr_ranges <- function(seuratobj, 
-                        target, 
+corr_ranges <- function(seuratobj,
+                        target,
                         ranges.links.final,
                         corrtheshold,
                         assay_exp,
@@ -20,7 +29,7 @@ corr_ranges <- function(seuratobj,
   }else{
     peak.data <- seuratobj[["ATAC"]]@counts[unique(ranges.links.final$peak),] %>% t() %>%  as.data.frame()
   }
-  
+
   if(assay_exp == "RNA"){
     exp.data <- seuratobj[["RNA"]]$data[target, ] %>% as.data.frame()
     colnames(exp.data) <- target
@@ -28,14 +37,14 @@ corr_ranges <- function(seuratobj,
     exp.data <- seuratobj[["SCT"]]$data[target, ] %>% as.data.frame()
     colnames(exp.data) <- target
   } # assay_expの条件分岐
-  
-      
-      
+
+
+
       # クラスタごとの平均発現量を調べる
       cluster <- Idents(seuratobj) %>% as.data.frame()
       colnames(cluster) <- "cluster"
       peak.data$cluster <- cluster$cluster
-      summarize_peak <- peak.data %>% dplyr::group_by(cluster) %>% summarize_all(mean) %>% 
+      summarize_peak <- peak.data %>% dplyr::group_by(cluster) %>% summarize_all(mean) %>%
         dplyr::select(-cluster) %>% apply(2, max) %>% as.data.frame()
       colnames(summarize_peak) <- "max"
       # ranges.links.finalのフィルタリング（ATACのカウント値のフィルタリング）
@@ -49,15 +58,15 @@ corr_ranges <- function(seuratobj,
       # ranges.links.finalのフィルタリング（ATACとSCTの相関）
       res_cor <- res_cor[which(res_cor[,1] > corrtheshold), ]
       # res_cor <- res_cor[-1,]  # 遺伝子名除去
-      
-      
-      
+
+
+
       # 合わせてranges.links.finalをフィルタリング
       int_peak <- intersect(rownames(res_cor), rownames(summarize_peak))
       ranges.links.final <- ranges.links.final %>% dplyr::filter(peak %in% int_peak)
-      
+
       # 保存
       write.table(ranges.links.final, paste(target, "_corr_ranges.links.txt", sep = ""),  quote = F, sep = "\t", col.names =NA)
-    
+
       return(ranges.links.final)
     }

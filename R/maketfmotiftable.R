@@ -1,5 +1,13 @@
 
-
+#' @title Make TF motif table
+#' @description \code{maketfmotiftable}  Make TF motif table
+#'
+#' @importFrom
+#' @param PFMatrixList PFMatrixList from getMatrixSet output
+#' @return tfs
+#' @export
+#' @examples
+#' # tfs <- maketfmotiftable(PFMatrixList = PFMatrixList)
 
 
 # @PFMatrixList = PFMatrixList
@@ -15,4 +23,4 @@ maketfmotiftable <- function(PFMatrixList){
   colnames(tfs) <- c("name", "ID")
   return(tfs)
 }
-  
+
