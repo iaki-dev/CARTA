@@ -25,7 +25,7 @@ You can install the development version of CARTA from [GitHub](https://github.co
 pak::pak("iaki-dev/CARTA")
 ```
 
-## Tutorial
+## Tutorial1: Create CARTA-Net
 
 This is a basic example which shows you how to create CARTA-Net.
 
@@ -237,4 +237,16 @@ write.table(CARTA_Net, "CARTA_Net_conservation_score.txt", quote = F, sep = "\t"
 
 
 ```
+
+
+## Tutorial2: Visualization of CARTA-Net output
+
+This is a basic example which shows you how to visualization of CARTA-Net results.
+
+``` r
+
+
+
+```
+
 
