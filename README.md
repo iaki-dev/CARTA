@@ -4,13 +4,9 @@
 <!-- badges: start -->
 <!-- badges: end -->
 
-CARTA (Connected Accessible Regions by input of the combination between Transcription factor and tArget) , <br>
-similar to the traditional Japanese game of karuta, where the upper phrase is read and then <br>
-matched with the lower phrase, can extract candidate enhancement regions by inputting combinations of TF and target.
+CARTA (Connected Accessible Regions by input of the combination between Transcription factor and tArget) , similar to the traditional Japanese game of karuta, where the upper phrase is read and then matched with the lower phrase, can extract candidate enhancement regions by inputting combinations of TF and target.
 
-CARTA is R package to construct cis-regulatory networks (CARTA-Net), extracting TF-binding motifs within enhancer-like regions <br>
-that positively correlate with gene expression, are co-accessible with TSSs, and are highly conserved across mammals, <br>
-using only TF-target combinations of interest as input. <br>
+CARTA is R package to construct cis-regulatory networks (CARTA-Net), extracting TF-binding motifs within enhancer-like regions that positively correlate with gene expression, are co-accessible with TSSs, and are highly conserved across mammals, using only TF-target combinations of interest as input. <br>
 CARTA is designed for single-cell multiome data analysis under Seurat and Signac environment.
 
 
