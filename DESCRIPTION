@@ -1,0 +1,17 @@
+Package: CARTA
+Type: Package
+Title: CARTA
+Version: 1.0.0
+Authors@R: c(
+    person(
+      "Akiyasu", "Iwase",
+      email = "akiiwase-tky@umin.ac.jp",
+      role = c("aut", "cre")
+    )
+  )
+Description: This is CARTA for analyis package of single-cell multiome (GEX+ATAC) data.
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.2
