@@ -249,8 +249,8 @@ df.genome <- data.frame(gexatac_merge[["ATAC"]]@annotation)
 
 CARTA_Net_summarize <- read_tsv("CARTA_Net_conservation_score.txt")
 
-TFi <- "Transcription fator of interst"
-goi <- "target gene of interest"
+TFi <- "Meis2" # Transcription fator of interst
+goi <- "Sox9" # target gene of interest
 target <- goi
 roi <- CARTA_Net_summarize %>% dplyr::filter(target == goi, TF == TFi)
 
