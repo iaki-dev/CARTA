@@ -12,7 +12,7 @@ CARTA is R package to construct cis-regulatory networks (CARTA-Net), extracting 
 CARTA is designed for single-cell multiome data analysis under Seurat and Signac environment.
 
 
-## Citeation
+## Citation
 CARTA is now open in bioRxiv. Please cite the below paper.
 https://www.biorxiv.org/content/10.1101/2025.11.09.687497v1
 
