@@ -1,7 +1,7 @@
 Package: CARTA
 Type: Package
 Title: CARTA
-Version: 1.0.0
+Version: 1.1.0
 Authors@R: c(
     person(
       "Akiyasu", "Iwase",
