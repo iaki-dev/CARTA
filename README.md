@@ -6,7 +6,7 @@
 
 ![CARTA_image](CARTA_image.png)
 
-=======
+
 CARTA (Connected Accessible Regions by input of the combination between Transcription factor and tArget) , similar to the traditional Japanese card game, where the upper phrase is read and then matched with the lower phrase, can extract candidate enhancer regions by inputting combinations of TF and target.
 
 CARTA is R package to construct cis-regulatory networks (CARTA-Net), extracting TF-binding motifs within enhancer-like regions that positively correlate with gene expression, are co-accessible with TSSs, and are highly conserved across mammals, using only TF-target combinations of interest as input. <br>
@@ -28,8 +28,8 @@ pak::pak("iaki-dev/CARTA")
 ```
 
 ## History
-v1.1; Add tfs and tfs2
-v1.1.1; Add mm10.60way.phastCons60wayEuarchontoGlire.bw_df
+v1.1; Add tfs and tfs2 <br>
+v1.1.1; Add mm10.60way.phastCons60wayEuarchontoGlire.bw_df <br>
 v2.0; Change to use JASPAR2024 for the transcription  factor motifs
 
 ## Tutorial 1: Create CARTA-Net
