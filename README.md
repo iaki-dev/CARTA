@@ -78,8 +78,15 @@ motif_pos <- matchMotifs(PFMatrixList, search.peaks, genome = genome,  out = c("
 saveRDS(motif_pos, "motif_pos.rds")
 # motif_pos <- readRDS("motif_pos.rds")
 
-tfs <- maketfmotiftable(PFMatrixList = PFMatrixList)
-tfs2 <- cleantfmotiftable(tfs =tfs)
+# Load JASPAR2024 transcription factor motifs among the vertebrates.
+# tfs object is the table of transcription factors and their motifs.
+# tfs2 object is deduplicated tfs.
+data(tfs)
+data(tfs2)
+# (Option)
+# If you want to use the original PFMatrixList, the below commmands are used for creating tfs and tfs2.
+# tfs <- maketfmotiftable(PFMatrixList = PFMatrixList)
+# tfs2 <- cleantfmotiftable(tfs =tfs)
 
 gexatac_merge <- RegionStats(gexatac_merge, genome = BSgenome.Mmusculus.UCSC.mm10)
 
