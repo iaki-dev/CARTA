@@ -30,7 +30,8 @@ pak::pak("iaki-dev/CARTA")
 ## History
 v1.1; Add tfs and tfs2 <br>
 v1.1.1; Add mm10.60way.phastCons60wayEuarchontoGlire.bw_df <br>
-v2.0; Change to use JASPAR2024 for the transcription  factor motifs
+v2.0; Change to use JASPAR2024 for the transcription  factor(TF) motifs. <br>
+         879 TF motifs in the vertebrates. 
 
 ## Tutorial 1: Create CARTA-Net
 
