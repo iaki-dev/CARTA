@@ -14,8 +14,9 @@ CARTA is designed for single-cell multiome data analysis under Seurat and Signac
 
 
 ## Citation
-CARTA is now open in bioRxiv. Please cite the below paper.
-https://www.biorxiv.org/content/10.1101/2025.11.09.687497v1
+CARTA is now open in The EMBO Journal (EMBO J. 2026 Sep 15. doi: 10.1038/s44318-026-00886-x).
+Please cite the below paper.
+[https://www.biorxiv.org/content/10.1101/2025.11.09.687497v1](https://link.springer.com/article/10.1038/s44318-026-00886-x)
 
 
 ## Installation
